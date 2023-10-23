@@ -3,28 +3,34 @@
 // Número de ejericio: 9 y 2
 // Problema planteado: Realizar un algoritmo recursivo para Generar la secuencia: 1, 1, 2, 4, 8, 16, 23, 28, 38, 49,..., para n términos
 #include <iostream>
-#include <wchar.h>
 
 using namespace std;
 
-unsigned int factorial(unsigned int);
+int digito(int);
+
+int SumaTerminos(int);
 
 int main()
 {
-    unsigned int n,m;
-    setlocale(LC_ALL, "");
-    cout << "Ingrese un valor: ";cin >> n;
-    cout << "Ingrese un valor: ";cin >> m;
-    cout<< " es igual a " << (factorial(n))/(factorial(n-m)*factorial(m));
+    int terminos;
+    cin>>terminos;
+    for(int i = 1; i <= terminos; i++)
+        cout<<digito(i)<<"\t";
+
     return 0;
 }
-
-//Muestra el factorial de un número
-unsigned int factorial(unsigned int x)
-{
-    if (x == 0) // Condición de SALIDA - CASO BASE
-        x = 1;
+int digito(int X){
+    if(X == 1 || X == 2)
+        return 1;
     else
-        x = x * factorial(x-1);
-    return x;
+        return SumaTerminos(digito(X - 1)) + digito(X - 1);
+}
+
+
+int SumaTerminos(int num)
+{
+    if(num == 0)
+        num = 0;
+    else
+    return num % 10 + SumaTerminos(num / 10);
 }
