@@ -7,24 +7,24 @@
 
 using namespace std;
 
-int sumatoria(int);
+unsigned int factorial(unsigned int);
 
 int main()
 {
-    int n;
-    cout<<"ingrese el valor de n:  "<<endl;cin>>n;
-    for (int i=0; i<n; i++)
-        cout << sumatoria(i) << endl;
+    unsigned int n,m;
+    setlocale(LC_ALL, "");
+    cout << "Ingrese un valor: ";cin >> n;
+    cout << "Ingrese un valor: ";cin >> m;
+    cout<< " es igual a " << (factorial(n))/(factorial(n-m)*factorial(m));
     return 0;
 }
 
-int sumatoria(int n)
+//Muestra el factorial de un número
+unsigned int factorial(unsigned int x)
 {
-/*
-    if(n==0)
-        return 0;
-    else if(n>=1)
-        return n=n+sumatoria(n%10)+sumatoria(n/10);
-    */
-
+    if (x == 0) // Condición de SALIDA - CASO BASE
+        x = 1;
+    else
+        x = x * factorial(x-1);
+    return x;
 }
