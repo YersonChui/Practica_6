@@ -13,7 +13,7 @@ int SumaTerminos(int);
 int main()
 {
     int terminos;
-    cin>>terminos;
+    cout<<"ingrese el numero de terminos:  ";cin>>terminos;
     for(int i = 1; i <= terminos; i++)
         cout<<digito(i)<<"\t";
 
