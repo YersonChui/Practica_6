@@ -1,9 +1,12 @@
+// Fecha creaci贸n: 18/10/2023
+// Fecha modificaci贸n: 22/10/2023
+// N煤mero de ejericio: 10
+// Problema planteado: Realizar un algoritmo recursivo para calcular el coeficiente binomial a partir de la lectura de dos n煤meros enteros, a partir de la relaci贸n:
+
 #include <iostream>
 #include <wchar.h>
 
 using namespace std;
-
-
 
 unsigned int factorial(unsigned int);
 
@@ -17,10 +20,10 @@ int main()
     return 0;
 }
 
-//Muestra el factorial de un n鷐ero
+//Muestra el factorial de un n煤mero
 unsigned int factorial(unsigned int x)
 {
-    if (x == 0) // Condici髇 de SALIDA - CASO BASE
+    if (x == 0) // Condici贸n de SALIDA - CASO BASE
         x = 1;
     else
         x = x * factorial(x-1);
