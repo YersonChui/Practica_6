@@ -1,3 +1,7 @@
+// Fecha creación: 18/10/2023
+// Fecha modificación: 22/10/2023
+// Número de ejericio: 9 y 2
+// Problema planteado: Realizar un algoritmo recursivo para Generar la secuencia: 1, 1, 2, 4, 8, 16, 23, 28, 38, 49,..., para n términos
 #include <iostream>
 #include <wchar.h>
 
